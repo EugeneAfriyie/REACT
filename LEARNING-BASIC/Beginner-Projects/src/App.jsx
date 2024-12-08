@@ -4,6 +4,8 @@ import accordionData from "./components/Accordions/utils/content";
 import Calculator from "./components/Calculator";
 import Counter from "./components/Counter";
 import Form from "./components/Form";
+import HiddenSearchBar from "./components/HiddenSearchBar";
+import Meal from "./components/Meal";
 
 const App = () => {
   return (
@@ -17,7 +19,11 @@ const App = () => {
       {/* <Calculator /> */}
       {/* <Counter /> */}
 
-      < Form />
+      {/* < Form /> */}
+
+      {/* <HiddenSearchBar /> */}
+
+      <Meal />
     </div>
   );
 };

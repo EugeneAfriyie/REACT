@@ -1,17 +1,23 @@
 import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
-import "./index.css";
+import "../style/ToggleBackgroundColor.css";
 
 function HiddenSearchBar() {
   const [showInput, setShowInput] = useState(false);
   const [bgColor, setBgColor] = useState("white");
 
   const handleClick = (e) => {
-    setBgColor("#1a1a1a");
-    if (e.target.className === "container") {
-      setShowInput(false);
-      setBgColor("#fff");
+    // Check if the click happened inside the container, but outside the input
+    if (e.target.className === "container" && showInput) {
+      setShowInput(false);  // Hide the input
+      setBgColor("#fff");    // Reset background color to white
     }
+  };
+
+  const handleSearchIconClick = (e) => {
+    setShowInput(true);  // Show the input when search icon is clicked
+    setBgColor("#1a1a1a");  // Change background color to dark
+    e.stopPropagation(); // Prevent the click from triggering handleClick
   };
 
   return (
@@ -23,7 +29,7 @@ function HiddenSearchBar() {
       {showInput ? (
         <input type="text" placeholder="Search..." />
       ) : (
-        <FaSearch onClick={() => setShowInput(true)} />
+        <FaSearch className="icon" onClick={handleSearchIconClick} />
       )}
     </section>
   );

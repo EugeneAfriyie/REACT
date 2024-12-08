@@ -30,6 +30,9 @@
     justify-content: space-between;
     font-family: sans-serif;
     margin-top: 20px;
+    /* border: 1px solid red; */
+    height: 200px;
+
   }
   
   p {
