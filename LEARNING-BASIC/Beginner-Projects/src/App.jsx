@@ -1,11 +1,14 @@
 import React from "react";
-import Accordions from "./components/Accordions/Accordions";
-import accordionData from "./components/Accordions/utils/content";
-import Calculator from "./components/Calculator";
-import Counter from "./components/Counter";
-import Form from "./components/Form";
+// import Accordions from "./components/Accordions/Accordions";
+// import accordionData from "./components/Accordions/utils/content";
+// import Calculator from "./components/Calculator";
+// import Counter from "./components/Counter";
+// import Form from "./components/Form";
 import HiddenSearchBar from "./components/HiddenSearchBar";
-import Meal from "./components/Meal";
+// import Meal from "./components/Meal";
+// import Testimonials from "./components/Testimonials";
+// import Todo from "./components/Todo";
+// import ToggleBackgroundColor from "./components/ToggleBackgroundColor";
 
 const App = () => {
   return (
@@ -21,9 +24,13 @@ const App = () => {
 
       {/* < Form /> */}
 
-      {/* <HiddenSearchBar /> */}
+      <HiddenSearchBar />
 
-      <Meal />
+      {/* <Meal /> */}
+
+      {/* <Testimonials /> */}
+      {/* <Todo /> */}
+      {/* <ToggleBackgroundColor /> */}
     </div>
   );
 };

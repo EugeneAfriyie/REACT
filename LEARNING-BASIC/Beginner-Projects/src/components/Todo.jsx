@@ -13,7 +13,7 @@ function Todo() {
     setTodos((todos) =>
       todos.concat({
         text: input,
-        id: generateId(),
+        id: Date.now(),
       })
     );
     setInput("");
@@ -24,6 +24,7 @@ function Todo() {
 
   return (
     <div className="container">
+      <div className="">
       <input
         type="text"
         value={input}
@@ -32,14 +33,15 @@ function Todo() {
       />
 
       <button onClick={handleSubmit}>Submit</button>
+    </div>
 
       <ul className="todos-list">
         {todos.map(({ text, id }) => (
           <li key={id} className="todo">
             <span>{text}</span>
-            <button className="close" onClick={() => removeTodo(id)}>
+            <span className="close" onClick={() => removeTodo(id)}>
               X
-            </button>
+            </span>
           </li>
         ))}
       </ul>

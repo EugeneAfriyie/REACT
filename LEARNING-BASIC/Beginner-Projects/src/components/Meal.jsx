@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import "../style/meal.css";
+import "../style/meal.css"
 
 function Meal() {
   const [items, setitems] = useState([]);
@@ -23,9 +23,7 @@ function Meal() {
         <img src={strMealThumb} />
         <section className="content">
           <p>{strMeal}</p>
-          <p>#{
-idMeal
-}</p>
+          <p>#{idMeal}</p>
         </section>
       </section>
     );

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./index.css";
+import "../style/Testimonials.css";
 
 function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
