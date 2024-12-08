@@ -15,7 +15,7 @@ function Testimonials() {
     {
       quote: "This product has completely changed my life!",
       author: "Bob Johnson",
-    },
+    },  
   ];
 
   const handlePrevClick = () => {

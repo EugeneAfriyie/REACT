@@ -4,9 +4,9 @@ import React from "react";
 // import Calculator from "./components/Calculator";
 // import Counter from "./components/Counter";
 // import Form from "./components/Form";
-import HiddenSearchBar from "./components/HiddenSearchBar";
+// import HiddenSearchBar from "./components/HiddenSearchBar";
 // import Meal from "./components/Meal";
-// import Testimonials from "./components/Testimonials";
+import Testimonials from "./components/Testimonials";
 // import Todo from "./components/Todo";
 // import ToggleBackgroundColor from "./components/ToggleBackgroundColor";
 
@@ -24,11 +24,11 @@ const App = () => {
 
       {/* < Form /> */}
 
-      <HiddenSearchBar />
+      {/* <HiddenSearchBar /> */}
 
       {/* <Meal /> */}
 
-      {/* <Testimonials /> */}
+      <Testimonials />
       {/* <Todo /> */}
       {/* <ToggleBackgroundColor /> */}
     </div>
