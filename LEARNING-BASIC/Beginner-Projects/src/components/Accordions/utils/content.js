@@ -1,4 +1,4 @@
-export const accordionData = [
+ const accordionData = [
     {
       title: "What Is HTML?",
       content: `The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.`,
@@ -16,3 +16,5 @@ export const accordionData = [
       content: `Go is a statically typed, compiled programming language designed at Google by Robert Griesemer, Rob Pike, and Ken Thompson. It is syntactically similar to C, but with memory safety, garbage collection, structural typing, and CSP-style concurrency`,
     },
   ];
+
+  export default accordionData;

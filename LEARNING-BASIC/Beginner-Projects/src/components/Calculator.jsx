@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../style/calculator.css";
 
-function calculator() {
+function Calculator() {
   const [inputvalue, setinputvalue] = useState("");
 
   function display(value) {
@@ -48,4 +48,4 @@ function calculator() {
   );
 }
 
-export default calculator;
+export default Calculator;
