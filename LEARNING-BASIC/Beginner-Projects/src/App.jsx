@@ -1,10 +1,10 @@
 import React from "react";
-import Accordions from "./components/Accordions/Accordions";
+// import Accordions from "./components/Accordions/Accordions";
 import accordionData from "./components/Accordions/utils/content";
 // import Calculator from "./components/Calculator";
 // import Counter from "./components/Counter";
-import Form from "./components/Form";
-// import HiddenSearchBar from "./components/HiddenSearchBar";
+// import Form from "./components/Form";
+import HiddenSearchBar from "./components/HiddenSearchBar";
 // import Meal from "./components/Meal";
 // import Testimonials from "./components/Testimonials";
 // import Todo from "./components/Todo";
@@ -23,9 +23,9 @@ const App = () => {
       {/* <Calculator /> */}
       {/* <Counter /> */}
 
-      < Form />
+      {/* < Form /> */}
 
-      {/* <HiddenSearchBar /> */}
+      <HiddenSearchBar />
 
       {/* <Meal /> */}
 
