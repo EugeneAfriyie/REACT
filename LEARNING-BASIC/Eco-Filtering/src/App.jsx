@@ -1,8 +1,10 @@
-import React from 'react'
+import Nav from "./NAVIGATION/Nav"
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Nav/>
+    </div>
   )
 }
 
