@@ -33,7 +33,7 @@ function Form() {
       setEmailColor("green");
     } else {
       setEmailColor("red");
-      setErrorEmail("Email should have @gmail");
+      setErrorEmail("Please Enter a Valid Gmail");
     }
 
     if (password.length > 8) {
