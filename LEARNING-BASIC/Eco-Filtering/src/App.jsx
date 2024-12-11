@@ -27,6 +27,33 @@ const filteredItems = products.filter(product =>
 );
 
 
+// ************ Radio filtering ************
+
+const handleChange = e =>{
+  setSelectedCategory(e.target.value)
+}
+
+// ************ Radio Button ************
+
+const handleClick = e =>{
+  setSelectedCategory(e.target.value)
+}
+
+
+const filteredData (products,selected,query) =>{
+
+let filteredProducts = filteredItems;
+
+// Fltering Input Data 
+
+if (query){
+  filteredProducts = filteredItems;
+}
+
+D
+
+}
+
 
   return (
     <div>
