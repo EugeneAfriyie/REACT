@@ -5,12 +5,26 @@ import '../src/index.css'
 import Sidebar from "./Sidebar/sidebar"
 import { useState } from "react"
 
+import products from "./data/data"
+
 const App = () => {
 
   const [selectedCategory,setSelectedCategory] = useState(null);
 
 
-  input filter
+  // input filter
+
+  const [query,setQuery] = useState("");
+
+
+  const handleInputChange = e =>{
+    setQuery(e.target.value)
+  }
+
+
+const filteredItems = products.filter(product => 
+    product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1
+);
 
 
 
