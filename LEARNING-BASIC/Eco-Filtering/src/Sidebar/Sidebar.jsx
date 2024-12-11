@@ -6,7 +6,9 @@ import Colors from './Colors/Colors.jsx'
 //  console.log('Colors component path:', require.resolve('./COLORS/Colors.jsx'));
 
 
-const Sidebar = () => {
+const Sidebar = ({handleChange}) => {
+
+  // console.log(handleChange)
   return (
     <>
        <section className="sidebar">
@@ -14,9 +16,9 @@ const Sidebar = () => {
             <h1>🛒</h1>
         </div>
 
-        <Category />
-        <Colors />
-        <Price />
+        <Category handleChange={handleChange}/>
+        <Price    handleChange={handleChange}/>
+        <Colors   handleChange={handleChange}/>
         </section> 
     </>
   )

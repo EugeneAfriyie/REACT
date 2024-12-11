@@ -5,16 +5,17 @@ import '../src/index.css'
 import Sidebar from "./Sidebar/sidebar"
 import { useState } from "react"
 
-import products from "./data/data"
+import products from "./data/data.jsx"
+import Card from "./Component/Card"
 
 const App = () => {
 
   const [selectedCategory,setSelectedCategory] = useState(null);
+  const [query,setQuery] = useState("");
 
 
   // input filter
 
-  const [query,setQuery] = useState("");
 
 
   const handleInputChange = e =>{
@@ -24,7 +25,11 @@ const App = () => {
 
 const filteredItems = products.filter(product => 
     product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1
+    
+
 );
+
+console.log(query)
 
 
 // ************ Radio filtering ************
@@ -40,7 +45,7 @@ const handleClick = e =>{
 }
 
 
-const filteredData (products,selected,query) =>{
+const filteredData = (products,selected,query) =>{
 
 let filteredProducts = filteredItems;
 
@@ -50,17 +55,58 @@ if (query){
   filteredProducts = filteredItems;
 }
 
-D
+// Selected Filter 
+
+if(selected){
+  // console.log(filteredProducts)
+
+  filteredProducts = filteredProducts.filter(({category,color,company,newPrice,title}) =>(
+    category === selected
+     || color === selected 
+     || company === selected 
+     || newPrice === selected 
+     || title === selected
+  ));
+
+
+    // console.log(filteredProducts)
+  
+}
+
+if(!selected && !query){
+  filteredProducts = products
+}
+
+
+return filteredProducts.map(({img,title,prevPrice,star,reviews,newPrice}) =>
+(  
+
+  <Card 
+  key={title + Math.random()}
+  img={img}
+  title={title}
+  prevPrice={prevPrice}
+  star ={star}
+  reviews = {reviews}
+  newPrice = {newPrice}
+
+  />
+))
+
 
 }
 
 
+const result = filteredData(products,selectedCategory,query)
+
+// console.log(result)
+
   return (
     <div>
-      <Sidebar />
-      <Nav/>
-      <Recommended/>
-      <Products />
+      <Sidebar handleChange={handleChange} />
+      <Nav query={query} handleInputChange={handleInputChange}/>
+      <Recommended handleClick={handleClick}/>
+      <Products result={result} />
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import './recommended.css'
 
-const Recommended = () => {
+const Recommended = ({handleClick}) => {
   return (
     <>
       <div className="">
