@@ -1,6 +1,6 @@
 import Input from '../../Component/Input'
 import './Price.css'
-const Price = ({handleChange}) => {
+const Price = ({handleChange,checkedInput}) => {
   return (
     <div className='ml'>
       <h2 className="sidebar-title price-title">Price</h2>
@@ -8,7 +8,7 @@ const Price = ({handleChange}) => {
      
       <div className="">
        <label  className='sidebar-label-container'>
-        <input type="radio" onChange={handleChange} value='All' name='test'  />
+        <input type="radio" onChange={handleChange} value='' name='test' className='checkbox' />
         <span className="checkmark"></span> All
        </label>
 
@@ -16,7 +16,7 @@ const Price = ({handleChange}) => {
         handleChange={handleChange}
         value={50}
         title='$0 - $50'
-        name='test4'
+        name='test'
         
         />
     
@@ -24,7 +24,7 @@ const Price = ({handleChange}) => {
         handleChange={handleChange}
         value={100}
         title='$50 - $100'
-        name='test4'
+        name='test'
         
         />
     
@@ -32,7 +32,7 @@ const Price = ({handleChange}) => {
         handleChange={handleChange}
         value={150}
         title='$100 - $150'
-        name='test4'
+        name='test'
         
         />
     
@@ -40,7 +40,7 @@ const Price = ({handleChange}) => {
         handleChange={handleChange}
         value={200}
         title='Over $150'
-        name='test4'
+        name='test'
         
         />
     

@@ -6,7 +6,7 @@ import Colors from './Colors/Colors.jsx'
 //  console.log('Colors component path:', require.resolve('./COLORS/Colors.jsx'));
 
 
-const Sidebar = ({handleChange}) => {
+const Sidebar = ({handleChange,checkedInput}) => {
 
   // console.log(handleChange)
   return (
@@ -16,9 +16,9 @@ const Sidebar = ({handleChange}) => {
             <h1>🛒</h1>
         </div>
 
-        <Category handleChange={handleChange}/>
-        <Price    handleChange={handleChange}/>
-        <Colors   handleChange={handleChange}/>
+        <Category handleChange={handleChange} checkedInput={checkedInput}/>
+        <Price    handleChange={handleChange} checkedInput={checkedInput}/>
+        <Colors   handleChange={handleChange} checkedInput={checkedInput}/>
         </section> 
     </>
   )

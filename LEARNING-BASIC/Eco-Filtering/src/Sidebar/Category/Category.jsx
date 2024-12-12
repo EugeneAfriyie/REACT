@@ -1,14 +1,15 @@
   import Input from '../../Component/Input'
 import './Category.css'
-const Category = ({handleChange}) => {
+const Category = ({handleChange,checkedInput}) => {
+  console.log(checkedInput)
   return (
     <div>
       <h2 className="sidebar-title">Category</h2>
 
       <div className="">
        <label  className='sidebar-label-container'>
-        <input type="radio" onChange={handleChange} value='' name='test'  />
-        <span className="checkmark"></span> All
+        <input type="radio" onChange={handleChange} value="" name='test' className='checkbox'  checked={checkedInput === ""}/>
+        <span className="checkmark" ></span> All
        </label>
 
        <Input
@@ -16,6 +17,8 @@ const Category = ({handleChange}) => {
         value='sneakers'
         title='Sneakers'
         name='test'
+        checked={checkedInput === "sneakers"}
+      
         
         />
        <Input
@@ -23,6 +26,9 @@ const Category = ({handleChange}) => {
         value='sandals'
         title='Sandals'
         name='test'
+        checked={checkedInput === "sandals"}
+      
+
         
         />
        <Input
@@ -30,6 +36,9 @@ const Category = ({handleChange}) => {
         value='heels'
         title='Heels'
         name='test'
+        checked={checkedInput === "heels"}
+      
+
         
         />
        <Input
@@ -37,6 +46,9 @@ const Category = ({handleChange}) => {
         value='flats'
         title='Flats'
         name='test'
+        checked={checkedInput === "flats"}
+      
+
         
         />
    
