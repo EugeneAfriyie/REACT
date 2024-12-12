@@ -8,3 +8,7 @@
   .all {
     background: linear-gradient(blue, crimson);
   }
+
+  .last-checkmark-black:after {
+    background-color: black;
+  }

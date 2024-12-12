@@ -44,21 +44,23 @@
     background-color: #ccc;
   }
   
-  .sidebar-label-container input:checked ~ .checkmark {
+  .sidebar-label-container input:checked ~ .checkmark,.last-checkmark-black {
     background-color: #2196f3;
   }
   
-  .checkmark:after {
+  .checkmark:after,.last-checkmark-black {
     content: "";
     position: absolute;
     display: none;
   }
+
+ 
   
-  .sidebar-label-container input:checked ~ .checkmark:after {
+  .sidebar-label-container input:checked ~ .checkmark:after,.last-checkmark-black {
     display: block;
   }
   
-  .sidebar-label-container .checkmark:after {
+  .sidebar-label-container .checkmark:after,.last-checkmark-black::after {
     top: 6.4px;
     left: 6.4px;
     width: 7px;

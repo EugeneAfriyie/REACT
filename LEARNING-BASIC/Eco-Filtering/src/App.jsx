@@ -107,6 +107,10 @@ return filteredProducts.map(({img,title,prevPrice,star,reviews,newPrice}) =>
 }
 const result = filteredData(products,selectedCategory,query)
 
+//  if(selectedCategory === 'white'){
+//   document.querySelector(".checkmark:after").style.backgroundColor = "black"
+//  }
+
 
 // checkedInput()
 

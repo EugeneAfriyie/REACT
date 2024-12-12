@@ -9,7 +9,7 @@ const Colors = ({handleChange,checkedInput}) => {
       <h2 className="sidebar-title">Colors</h2>
 
 
-
+      <div>
        <Input
         handleChange={handleChange}
         value='black'
@@ -40,19 +40,18 @@ const Colors = ({handleChange,checkedInput}) => {
         title='Green'
         name='test'
         color='green'
+        checked={checkedInput === "green"}
         />
-       <Input
-        handleChange={handleChange}
-        value='black'
-        title='Black'
-        name='test'
-        color='black'
-        />
+      
      
 
-      <label  className='sidebar-label-container'>
-        <input type="radio" onChange={handleChange} value='white' name='test'  className='checkbox'/>
-        <span className="checkmark" style={{backgroundColor:'white',border:'2px solid black'}}></span> White
+      <label     className={`sidebar-label-container 
+          }`}>
+        <input type="radio" onChange={handleChange} value='white' name='test'  checked={checkedInput === "white"}  className='checkbox'/>
+        <span
+    className='checkmark'
+    style={{ backgroundColor: "white", border: "2px solid black" }}
+  ></span> White
        </label>
       </div>
     </div>

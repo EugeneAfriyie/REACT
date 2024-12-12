@@ -7,16 +7,15 @@ const Price = ({handleChange,checkedInput}) => {
 
      
       <div className="">
-       <label  className='sidebar-label-container'>
-        <input type="radio" onChange={handleChange} value='' name='test' className='checkbox' />
-        <span className="checkmark"></span> All
-       </label>
+     
 
        <Input
         handleChange={handleChange}
         value={50}
         title='$0 - $50'
         name='test'
+        checked={checkedInput === 50}
+
         
         />
     
@@ -25,6 +24,8 @@ const Price = ({handleChange,checkedInput}) => {
         value={100}
         title='$50 - $100'
         name='test'
+        checked={checkedInput === 100}
+
         
         />
     
@@ -33,6 +34,8 @@ const Price = ({handleChange,checkedInput}) => {
         value={150}
         title='$100 - $150'
         name='test'
+        checked={checkedInput === 150}
+
         
         />
     
@@ -41,6 +44,8 @@ const Price = ({handleChange,checkedInput}) => {
         value={200}
         title='Over $150'
         name='test'
+        checked={checkedInput === 200}
+
         
         />
     
