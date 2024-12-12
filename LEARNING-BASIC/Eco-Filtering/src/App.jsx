@@ -36,16 +36,6 @@ const filteredItems = products.filter(product =>
 
 const handleChange = e =>{
   setSelectedCategory(e.target.value)
-  // const allCheckbox = document.querySelectorAll('.checkbox');
-
-  //   allCheckbox.forEach(input =>{
-  //   e.target.value === input.className ? setcheckedInput("'checked") : setcheckedInput("")
-  // })
-
-
-  // console.log( e.target.className)
-
-  // return inputChecked
 }
 
 // ************ Radio Button ************
@@ -79,7 +69,6 @@ if(selected){
   ));
 
 
-    // console.log(filteredProducts)
   
 }
 
@@ -107,14 +96,7 @@ return filteredProducts.map(({img,title,prevPrice,star,reviews,newPrice}) =>
 }
 const result = filteredData(products,selectedCategory,query)
 
-//  if(selectedCategory === 'white'){
-//   document.querySelector(".checkmark:after").style.backgroundColor = "black"
-//  }
 
-
-// checkedInput()
-
-// console.log(result)
 
   return (
     <div>
