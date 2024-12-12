@@ -11,25 +11,17 @@ const App = () => {
 
   const [selectedCategory,setSelectedCategory] = useState("");
   const [query,setQuery] = useState("");
-  // const [checkedInput,setcheckedInput] = useState("");
 
 
   // input filter
-
-
 
   const handleInputChange = e =>{
     setQuery(e.target.value)
   }
 
 
-const filteredItems = products.filter(product => 
-    product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1
-    
 
-);
 
-// console.log(query)
 
 
 // ************ Radio filtering ************
@@ -47,18 +39,22 @@ const handleClick = e =>{
 
 const filteredData = (products,selected,query) =>{
 
-let filteredProducts = filteredItems;
+let filteredProducts = products;
 
-// Fltering Input Data 
+// Fltering Seach Input Data 
 
 if (query){
-  filteredProducts = filteredItems;
+  const filteredProducts = products.filter(product => 
+    product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1
+    
+
+);
+  // filteredProducts = filteredItems;
 }
 
-// Selected Filter 
+// Selected Filtering 
 
 if(selected){
-  // console.log(filteredProducts)
 
   filteredProducts = filteredProducts.filter(({category,color,company,newPrice,title}) =>(
     category === selected
