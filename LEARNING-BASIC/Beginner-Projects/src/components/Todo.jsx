@@ -1,9 +1,6 @@
 import { useState } from "react";
 import "../style/todo.css";
 
-function generateId() {
-  return Math.floor(Math.random() * 10);
-}
 
 function Todo() {
   const [todos, setTodos] = useState([]);

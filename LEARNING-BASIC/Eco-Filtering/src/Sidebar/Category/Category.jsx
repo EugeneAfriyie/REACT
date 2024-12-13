@@ -1,7 +1,6 @@
   import Input from '../../Component/Input'
 import './Category.css'
 const Category = ({handleChange,checkedInput}) => {
-  console.log(checkedInput)
   return (
     <div>
       <h2 className="sidebar-title">Category</h2>
